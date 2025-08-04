@@ -4,30 +4,32 @@ import React from 'react';
 const services = [
   {
     title: 'Car Detailing',
-    image: '/images/Rectangle37(6).png', // replace with your actual image path
+    image: '/images/Rectangle37(6).png',
   },
   {
     title: 'Gutter Cleaning',
-    image: '/images/Rectangle37(4).png', // replace with your actual image path
+    image: '/images/Rectangle37(4).png',
   },
   {
     title: 'Window Cleaning',
-    image: '/images/Rectangle37(5).png', // replace with your actual image path
+    image: '/images/Rectangle37(5).png',
   },
 ];
 
 const HealthWellbeingSection = () => {
   return (
-    <div className="bg-blue-100 py-4 px-">
-      <h2 className="text-xl sm:text-2xl font-poppins  ml-26 font-semibold text-black mb-4">
+    <div className="bg-blue-50 py-6 px-4">
+      {/* Heading */}
+      <h2 className="text-2xl sm:text-xl md:text-2xl font-poppins font-semibold text-black mb-6 text-center sm:text-left sm:ml-6 md:ml-12">
         Health & Wellbeing
       </h2>
 
-      <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
+      {/* Services Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {services.map((service, index) => (
           <div
             key={index}
-            className="relative w-[200px] h-[200px] rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
+            className="relative w-full h-[220px] sm:h-[200px] rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
           >
             {/* Image */}
             <img
@@ -37,11 +39,8 @@ const HealthWellbeingSection = () => {
             />
 
             {/* Semi-transparent Blue Strip */}
-            <div className="absolute top-1/2 left-1/2 w-full transform -translate-x-1/2 -translate-y-1/2">
-              <div
-                className="bg-[rgba(74,116,211,0.5)] text-white text-center text-base font-semibold py-2 px-1 
-                transition-all duration-300 hover:scale-105 hover:shadow-md"
-              >
+            <div className="absolute bottom-0 left-0 w-full">
+              <div className="bg-[rgba(74,116,211,0.6)] text-white text-center text-sm md:text-base font-semibold py-2 px-1 hover:scale-[1.02] transition-transform duration-300">
                 {service.title}
               </div>
             </div>

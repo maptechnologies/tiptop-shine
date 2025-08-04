@@ -3,53 +3,56 @@ import React from 'react';
 
 const CustomerTestimonial = () => {
   return (
-    <div className="bg-blue-100 py-8 px-2">
-      <div className="bg-blue-600 rounded-lg px-4 py-6 flex flex-col md:flex-row items-start justify-between gap-6 mx-auto w-full max-w-2xl text-white">
+    <div className="bg-slate-100 py-8 px-4">
+      <div className="bg-blue-600 rounded-lg px-6 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mx-auto w-full max-w-4xl text-white">
+        
         {/* Left Section */}
-        <div className="flex-1 max-w-[200px]">
-          <h2 className="text-base font-bold mb-2 leading-snug">
+        <div className="flex-1 max-w-sm">
+          <h2 className="text-lg sm:text-xl font-bold mb-3 leading-snug">
             What Our <br />
             <span className="text-white">Customer Says</span>
           </h2>
 
-          <ul className="text-[10px] leading-tight space-y-1 mb-3">
+          <ul className="text-xs sm:text-sm leading-tight space-y-1 mb-4">
             <li>“We’ve Helped Thousands Of Customers...”</li>
             <li>“See Why People Love Tip Top Shine.”</li>
             <li>“Read Real Customer Reviews.”</li>
           </ul>
 
-          <button className="bg-white text-blue-600 font-medium text-[10px] px-3 py-1 rounded hover:bg-blue-100 transition">
+          <button className="bg-white text-blue-600 font-medium text-xs sm:text-sm px-4 py-1.5 rounded hover:bg-blue-100 transition">
             Start Your Search
           </button>
 
-          <p className="mt-1 text-[8px] text-gray-200">Need a Service? Get Free Quotes Today</p>
+          <p className="mt-2 text-[10px] sm:text-xs text-gray-200">
+            Need a Service? Get Free Quotes Today
+          </p>
         </div>
 
         {/* Right Section */}
-        <div className="flex-1 bg-white text-black rounded-md shadow p-4 relative text-[11px] max-w-[300px] h-[220px] flex flex-col justify-between">
+        <div className="flex-1 bg-white text-black rounded-md shadow-lg p-5 relative text-sm max-w-sm w-full flex flex-col justify-between">
           {/* Quote Icon */}
-          <div className="text-lg font-bold absolute top-2 right-3 text-black">”</div>
+          <div className="text-2xl font-bold absolute top-2 right-4 text-gray-400">”</div>
 
           {/* Star Label */}
-          <div className="bg-orange-400 text-white rounded-full text-[9px] w-16 px-2 py-0.5 inline-block mb-1">
+          <div className="bg-orange-400 text-white rounded-full text-[10px] sm:text-xs w-fit px-3 py-0.5 mb-2">
             ★★★★★
           </div>
 
           {/* Quote */}
-          <p className="italic leading-snug text-[11px]">
+          <p className="italic leading-snug text-xs sm:text-sm">
             “I booked a deep cleaning service through Tip Top Shine, and they did an amazing job! My house has never been this spotless.”
           </p>
 
           {/* Avatar & Name */}
-          <div className="flex items-center gap-2 mt-2">
+          <div className="flex items-center gap-3 mt-4">
             <img
               src="/images/Ellipse2(1).png"
               alt="user"
-              className="w-6 h-6 rounded-full"
+              className="w-8 h-8 rounded-full object-cover"
             />
             <div>
-              <p className="font-semibold text-[11px]">Millon Zehino</p>
-              <p className="text-gray-500 text-[9px]">Behavioral Science</p>
+              <p className="font-semibold text-xs sm:text-sm">Millon Zehino</p>
+              <p className="text-gray-500 text-[10px] sm:text-xs">Behavioral Science</p>
             </div>
           </div>
         </div>

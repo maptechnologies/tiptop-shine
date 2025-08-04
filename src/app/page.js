@@ -7,7 +7,7 @@ import Health from "@/components/Health";
 import Wedding from "@/components/Wedding";
 import Tiptop from "@/components/Tiptop";
 import Customer from "@/components/Customer";
-import Jain from "@/components/Jain";
+
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
    <Wedding/>
    <Tiptop/>
    <Customer/>
-   <Jain/>
+
   {/* <Footer/> */}
   
  </div>

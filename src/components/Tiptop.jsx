@@ -6,28 +6,28 @@ const WhyChooseSection = () => {
     <div
       className="relative bg-blue-50 py-12 px-4 md:px-20 bg-no-repeat bg-cover bg-center"
       style={{
-        backgroundImage: "url('/images/cleaning-bg.png')", // 👈 your uploaded background
+        backgroundImage: "url('/images/cleaning-bg.png')", // 👈 your background
       }}
     >
-      {/* Optional Overlay (light blur for readability) */}
+      {/* Overlay for readability */}
       <div className="absolute inset-0 bg-white/80 backdrop-blur-sm z-0" />
 
-      {/* Actual Content */}
+      {/* Content Wrapper */}
       <div className="relative z-10">
         {/* Heading */}
-        <h2 className="text-2xl font-semibold text-center text-black mb-2">
+        <h2 className="text-2xl sm:text-2xl md:text-2xl font-semibold text-center text-black mb-3">
           Why Choose Tip Top Shine?
         </h2>
 
         {/* Subtext */}
-        <p className="max-w-3xl mx-auto text-center text-gray-700 text-sm md:text-base mb-10 leading-relaxed">
+        <p className="max-w-3xl mx-auto text-center text-gray-700 text-sm md:text-base mb-10 leading-relaxed px-2">
           We connect you with trusted, local professionals for any service you need — quickly, safely, and stress-free. Our goal is to make your life easier by helping you hire with confidence.
         </p>
 
         {/* Main Content */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-12 max-w-5xl mx-auto">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16 max-w-6xl mx-auto">
           {/* Image Grid */}
-          <div className="grid grid-cols-2 grid-rows-2 gap-1 rounded-lg overflow-hidden w-56 h-56 shadow-md">
+          <div className="grid grid-cols-2 grid-rows-2 gap-1 rounded-lg overflow-hidden w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 shadow-md">
             <img src="/images/Rectangle483.png" alt="hands" className="object-cover w-full h-full" />
             <img src="/images/Rectangle484.png" alt="hands" className="object-cover w-full h-full" />
             <img src="/images/Rectangle486(2).png" alt="hands" className="object-cover w-full h-full" />
@@ -35,7 +35,7 @@ const WhyChooseSection = () => {
           </div>
 
           {/* Features */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-gray-800 text-sm max-w-3xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-gray-800 text-sm max-w-3xl px-2">
             <div className="flex gap-3 items-start">
               <img src="/images/Group(1).png" alt="icon" className="w-5 h-5 mt-1" />
               <div>

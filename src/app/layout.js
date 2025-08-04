@@ -3,7 +3,6 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,9 +24,20 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        {children}
-         <Footer/>
+        {/* Fixed Header */}
+        <div >
+          <Header />
+        </div>
+
+        {/* Main content area with space for header & footer */}
+        <div >
+          {children}
+        </div>
+
+        {/* Fixed Footer */}
+        <div >
+          <Footer />
+        </div>
       </body>
     </html>
   );

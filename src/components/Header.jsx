@@ -1,34 +1,40 @@
 'use client'
+import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="w-full px-4 py-3 flex items-center justify-between bg-opacity-100 text-white relative z-100">
+    <header className="w-full px-4 sm:px-6 lg:px-16 py-3 flex items-center justify-between bg-opacity-100 text-white relative z-50">
       {/* Left: Logo + Explore */}
       <div className="flex items-center gap-3">
-        <img
-          src="/images/Fram99.png"
-          alt="Logo"
-          className="w-10 h-10 object-contain"
-        />
-        <span className="text-sm sm:text-base">
+        <Link href="/" onClick={() => setIsOpen(false)}>
+          <Image
+            src="/images/Fram99.png"
+            alt="Logo"
+            height={200}
+            width={300}
+            className="w-10 h-10 object-contain"
+          />
+        </Link>
+        <span className="text-sm sm:text-base cursor-pointer hover:text-blue-300 transition">
           Explore <span className="text-xs">▼</span>
         </span>
       </div>
 
       {/* Desktop Menu */}
       <div className="hidden md:flex items-center gap-4">
-        <a href="/login" className="text-sm hover:underline">
+        <Link href="/login" className="text-sm hover:underline">
           Login
-        </a>
-        <a
-          href="/pro-login"
-          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm"
+        </Link>
+        <Link
+          href="/join-professional"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm transition"
         >
           Login as a Professional
-        </a>
+        </Link>
       </div>
 
       {/* Hamburger Menu Button */}
@@ -41,7 +47,6 @@ const Header = () => {
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             strokeLinecap="round"
@@ -54,16 +59,21 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-full right-0 w-full bg-gray-900 text-white p-4 flex flex-col gap-3 md:hidden">
-          <a href="/login" className="block hover:underline">
+        <div className="absolute top-full right-0 w-full bg-gray-900 text-white p-4 flex flex-col gap-3 md:hidden shadow-lg">
+          <Link
+            href="/login"
+            className="block hover:underline"
+            onClick={() => setIsOpen(false)}
+          >
             Login
-          </a>
-          <a
-            href="/pro-login"
-            className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm text-center"
+          </Link>
+          <Link
+            href="/join-professional"
+            className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm text-center transition"
+            onClick={() => setIsOpen(false)}
           >
             Login as a Professional
-          </a>
+          </Link>
         </div>
       )}
     </header>
