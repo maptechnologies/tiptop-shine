@@ -13,7 +13,7 @@ export default function Home() {
   return (
  <div>
 
-  {/* <Header /> */}
+  <Header />
   <HeroSection/>
   <DiscoverSection/>
    <GardenSection/>
@@ -22,7 +22,7 @@ export default function Home() {
    <Tiptop/>
    <Customer/>
 
-  {/* <Footer/> */}
+  <Footer/>
   
  </div>
 
