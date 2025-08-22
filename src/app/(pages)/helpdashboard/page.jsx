@@ -1,3 +1,4 @@
+import UserHeader from "@/components/UserHeader";
 import Head from "next/head";
 
 export default function Home() {
@@ -7,77 +8,75 @@ export default function Home() {
         <title>Tiptop Help Center</title>
       </Head>
 
-      <div className="min-h-screen bg-white font-sans">
+      <UserHeader />
 
-        {/* Banner image with search bar overlay */}
-        <div className="relative w-full">
+      <div className="min-h-screen bg-white font-sans text-black">
+
+        {/* 🔍 Banner with Search Bar */}
+        <div className="relative w-full h-[300px] md:h-[400px]">
           <img
             src="/images/Vector(16).png"
             alt="Top Banner"
-            className="w-full h-auto object-cover"
+            className="w-full h-full object-cover"
           />
-          {/* Search bar positioned absolute on top of image, left center */}
-          <div className="absolute left-6 top-1/2 transform -translate-y-1/2">
+          <div className="absolute inset-0 flex items-center justify-center px-4">
             <input
               type="text"
-              placeholder="Search here..."
-              className="w-80 p-3 rounded-md text-white border border-gray-300 shadow placeholder-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="How can we assist you today?"
+              className="w-full sm:w-[400px] md:w-[500px] px-5 py-3 rounded-md text-white bg-black/30 backdrop-blur border border-white placeholder-white focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
         </div>
 
-        {/* Categories */}
-        <section className="py-12 text-center">
-          <h2 className="text-2xl text-black font-semibold mb-6">Categories</h2>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto px-4">
-            <div className="bg-gray-100 p-6 rounded-md hover:shadow">
-              <img
-                src="/images/Vector(15).png"
-                alt="New"
-                className="mx-auto w-12 h-12 mb-4"
-              />
-              <h3 className="text-lg text-black font-bold">New to Tiptop Shine</h3>
-              <p className="text-sm mt-2 text-black">
-                Find everything you need to kickstart your experience
-              </p>
-            </div>
-            <div className="bg-gray-100 p-6 rounded-md hover:shadow">
-              <img
-                src="/images/Vector(14).png"
-                alt="Pros"
-                className="mx-auto w-12 h-12 mb-4"
-              />
-              <h3 className="text-lg text-black font-bold">Professionals</h3>
-              <p className="text-sm mt-2 text-black">
-                Help topics for pros using Tiptop Shine
-              </p>
-            </div>
-            <div className="bg-gray-100 p-6 rounded-md hover:shadow">
-              <img
-                src="/images/Vector(13).png"
-                alt="Customers"
-                className="mx-auto w-12 h-12 mb-4"
-              />
-              <h3 className="text-lg text-black font-bold">Customers</h3>
-              <p className="text-sm mt-2 text-black">
-                Getting started and using Tiptop Shine easily
-              </p>
-            </div>
+        {/* 📂 Categories */}
+        <section className="py-12 text-center bg-gray-50">
+          <h2 className="text-2xl font-semibold mb-10">Categories</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-6">
+            {[
+              {
+                img: "/images/Vector(15).png",
+                title: "New to Tiptop Shine",
+                desc: "Find everything you need to kickstart your experience",
+              },
+              {
+                img: "/images/Vector(14).png",
+                title: "Professionals",
+                desc: "Help topics for pros using Tiptop Shine",
+              },
+              {
+                img: "/images/Vector(13).png",
+                title: "Customers",
+                desc: "Getting started and using Tiptop Shine easily",
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition"
+              >
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="mx-auto w-14 h-14 mb-4"
+                />
+                <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+                <p className="text-sm text-gray-600">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* Popular */}
+        {/* ⭐ Popular */}
         <section className="bg-white py-12">
-          <h2 className="text-center text-2xl  text-black font-semibold mb-6">Popular</h2>
-          <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto px-4 text-sm text-blue-600">
-            <ul className="space-y-2">
+          <h2 className="text-center text-2xl font-semibold mb-10">Popular</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto px-6 text-blue-600 text-sm">
+            <ul className="space-y-3 list-disc list-inside">
               <li>What is Tiptop Shine and how does it work?</li>
               <li>How do ratings work?</li>
               <li>How do I refer a friend?</li>
               <li>How do credits and points work?</li>
               <li>How can I view my invoices?</li>
             </ul>
-            <ul className="space-y-2">
+            <ul className="space-y-3 list-disc list-inside">
               <li>What are credit pack subscriptions?</li>
               <li>What is the cost for cancellations?</li>
               <li>What does it mean for Tiptop Pro?</li>
@@ -87,25 +86,25 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contact Us */}
+        {/* 📞 Contact Us */}
         <section className="py-12 bg-gray-50 text-center">
-          <h2 className="text-2xl font-semibold text-black mb-6">Connect with us</h2>
-          <div className="flex flex-col md:flex-row justify-center gap-6 max-w-4xl mx-auto px-4">
-            <div className="bg-white p-6 border rounded-md w-full md:w-1/2">
-              <p className="font-semibold text-black mb-2">Contact us via support request</p>
+          <h2 className="text-2xl font-semibold mb-10">Connect with us</h2>
+          <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 max-w-4xl mx-auto px-6">
+            <div className="bg-white p-6 border rounded-md flex-1">
+              <p className="font-semibold mb-2">Contact us via support request</p>
               <button className="text-blue-600 underline">Submit a request</button>
             </div>
-            <div className="bg-white p-6 border rounded-md w-full md:w-1/2">
-              <p className="font-semibold text-black mb-2">Call us</p>
-              <p className="text-black">1-855-456-6789</p>
+            <div className="bg-white p-6 border rounded-md flex-1">
+              <p className="font-semibold mb-2">Call us</p>
+              <p>1-855-456-6789</p>
             </div>
           </div>
         </section>
 
-        {/* Footer CTA */}
-        <div className="bg-blue-100 text-center py-6">
-          <p className="text-gray-800 mb-2">Need help finding what you need?</p>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-md">
+        {/* 📢 Footer CTA */}
+        <div className="bg-blue-100 text-center py-8 px-4">
+          <p className="text-gray-800 text-lg mb-3 font-medium">Need help finding what you need?</p>
+          <button className="bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700 transition">
             Submit a request
           </button>
         </div>

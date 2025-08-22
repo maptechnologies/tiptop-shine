@@ -1,10 +1,14 @@
 'use client';
 
 import ServicesChartWithCrosshair from '@/components/ServicesChartWithCrosshair';
+import UserHeader from '@/components/UserHeader';
 import Image from 'next/image';
 
 export default function Dashboard() {
   return (
+  <div>
+
+      <UserHeader/>
     <section className="bg-[#f7f7f7] min-h-screen py-6">
       <div className="max-w-[1200px] mx-auto px-4">
         
@@ -167,5 +171,6 @@ export default function Dashboard() {
 
       </div>
     </section>
+  </div>
   );
 }
