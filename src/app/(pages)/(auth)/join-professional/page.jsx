@@ -1,10 +1,13 @@
 'use client';
+import Header from '@/components/Header';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function HomePage() {
   return (
-    <div className="bg-white text-gray-900">
+  <div>
+    <Header/>
+      <div className="bg-white text-gray-900">
 
       {/* === HERO SECTION === */}
       <section className="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 py-12 gap-10">
@@ -216,5 +219,6 @@ export default function HomePage() {
       </section>
 
     </div>
+  </div>
   );
 }
