@@ -22,7 +22,7 @@ export default function Home() {
    <Tiptop/>
    <Customer/>
 
-  <Footer/>
+  {/* <Footer/> */}
   
  </div>
 
