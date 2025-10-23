@@ -15,8 +15,8 @@ const Header = () => {
             src="/images/animated logo.gif"
             alt="Logo"
             height={200}
-            width={300}
-            className="w-52 h-20 ml-[-25px] "
+            width={200}
+            className="w-50 h-18 ml-[-25px] "
           />
         </Link>
         {/* <span className="text-sm sm:text-base cursor-pointer hover:text-blue-300 transition">

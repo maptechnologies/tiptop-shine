@@ -246,7 +246,7 @@ export default function HomePage() {
 
   return (
     <div className="bg-white text-gray-900">
-      <Header />
+      {/* <Header /> */}
 
       {/* === HERO SECTION === */}
       <section 

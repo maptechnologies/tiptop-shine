@@ -1,26 +1,40 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const services = [
   {
     title: 'Yard Cleaning',
-    image: '/images/Rectangle37(7).png', // update with actual image path
+    image: '/images/Rectangle37(7).png',
   },
   {
     title: 'Post Construction Cleaning',
-    image: '/images/Rectangle37(3).png', // update with actual image path
+    image: '/images/Rectangle37(3).png',
   },
   {
     title: 'Pool Cleaning',
-    image: '/images/Rectangle37(7).png', // update with actual image path
+    image: '/images/Rectangle37(7).png',
   },
 ];
 
 const WeddingEventSection = () => {
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+      easing: 'ease-in-out',
+    });
+  }, []);
+
   return (
     <div className="bg-blue-50 py-6 px-4">
       {/* Heading */}
-      <h2 className="text-2xl sm:text-xl md:text-2xl font-poppins font-semibold text-black mb-6 text-center sm:text-left sm:ml-6 md:ml-12">
+      <h2
+        className="text-2xl sm:text-xl md:text-2xl font-poppins font-semibold text-black mb-6 text-center sm:text-left sm:ml-6 md:ml-12"
+        data-aos="fade-down"
+      >
         Wedding & Event
       </h2>
 
@@ -30,6 +44,8 @@ const WeddingEventSection = () => {
           <div
             key={index}
             className="relative w-full h-[220px] sm:h-[200px] rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
+            data-aos="fade-up"
+            data-aos-delay={index * 150} // stagger effect
           >
             {/* Image */}
             <img

@@ -8,7 +8,7 @@ export default function TiptopFooter() {
         
         {/* Logo */}
         <div className="flex sm:block justify-center sm:justify-start">
-          <Image src="/images/Fram99.png" alt="Tiptop Logo" width={80} height={80} />
+          <Image src="/images/animated logo.gif" alt="Tiptop Logo" width={200} height={200} />
         </div>
 
         {/* For Customer */}

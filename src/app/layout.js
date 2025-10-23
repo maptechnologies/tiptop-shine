@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
   useEffect(() => {
     AOS.init({
       duration: 800,       // animation duration in ms
-      once: true,          // animate only once
+      once: false,          // animate only once
       easing: 'ease-in-out' // smooth transition
     });
   }, []);
@@ -40,15 +40,19 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {/* Header */}
-        <Header />
+        <div data-aos="fade-down">
+          <Header />
+        </div>
 
         {/* Main content */}
-        <main>
+        <div data-aos="fade-up">
           {children}
-        </main>
+        </div>
 
         {/* Footer */}
-        <Footer />
+        <div data-aos="fade-up">
+          <Footer />
+        </div>
       </body>
     </html>
   );
