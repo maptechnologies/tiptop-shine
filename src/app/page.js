@@ -20,7 +20,7 @@ export default function Home() {
    <Health/>
    <Wedding/>
    <Tiptop/>
-   <Customer/>
+   {/* <Customer/> */}
 
   {/* <Footer/> */}
   
