@@ -7,21 +7,21 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="w-full px-4 sm:px-6 lg:px-16 py-3 flex items-center justify-between bg-opacity-100 text-white relative z-50">
+    <header className="w-full px-4 sm:px-6 lg:px-16 py-3 flex items-center justify-between bg-opacity-100 text-white bg-black relative z-50">
       {/* Left: Logo + Explore */}
       <div className="flex items-center gap-3">
         <Link href="/" onClick={() => setIsOpen(false)}>
           <Image
-            src="/images/Fram99.png"
+            src="/images/animated logo.gif"
             alt="Logo"
             height={200}
             width={300}
-            className="w-10 h-10 object-contain"
+            className="w-52 h-20 ml-[-25px] "
           />
         </Link>
-        <span className="text-sm sm:text-base cursor-pointer hover:text-blue-300 transition">
+        {/* <span className="text-sm sm:text-base cursor-pointer hover:text-blue-300 transition">
           Explore <span className="text-xs">▼</span>
-        </span>
+        </span> */}
       </div>
 
       {/* Desktop Menu */}
