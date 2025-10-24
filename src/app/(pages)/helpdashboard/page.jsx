@@ -1,7 +1,21 @@
+'use client';
+
+import { useEffect } from 'react';
 import UserHeader from "@/components/UserHeader";
 import Head from "next/head";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Home() {
+  // 🔹 Initialize AOS once
+  useEffect(() => {
+    AOS.init({
+      duration: 800,      // animation duration (ms)
+      once: false,         // only animate once
+      easing: 'ease-in-out', // smooth easing
+    });
+  }, []);
+
   return (
     <>
       <Head>
@@ -11,9 +25,8 @@ export default function Home() {
       <UserHeader />
 
       <div className="min-h-screen bg-white font-sans text-black">
-
         {/* 🔍 Banner with Search Bar */}
-        <div className="relative w-full h-[300px] md:h-[400px]">
+        <div className="relative w-full h-[300px] md:h-[400px]" data-aos="zoom-in">
           <img
             src="/images/Vector(16).png"
             alt="Top Banner"
@@ -30,8 +43,13 @@ export default function Home() {
 
         {/* 📂 Categories */}
         <section className="py-12 text-center bg-gray-50">
-          <h2 className="text-2xl font-semibold mb-10">Categories</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-6">
+          <h2 className="text-2xl font-semibold mb-10" data-aos="fade-down">
+            Categories
+          </h2>
+          <div
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-6"
+            data-aos="fade-up"
+          >
             {[
               {
                 img: "/images/Vector(15).png",
@@ -52,6 +70,8 @@ export default function Home() {
               <div
                 key={index}
                 className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition"
+                data-aos="fade-up"
+                data-aos-delay={index * 150}
               >
                 <img
                   src={item.img}
@@ -66,17 +86,17 @@ export default function Home() {
         </section>
 
         {/* ⭐ Popular */}
-        <section className="bg-white py-12">
+        <section className="bg-white py-12" data-aos="fade-up">
           <h2 className="text-center text-2xl font-semibold mb-10">Popular</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto px-6 text-blue-600 text-sm">
-            <ul className="space-y-3 list-disc list-inside">
+            <ul className="space-y-3 list-disc list-inside" data-aos="fade-right">
               <li>What is Tiptop Shine and how does it work?</li>
               <li>How do ratings work?</li>
               <li>How do I refer a friend?</li>
               <li>How do credits and points work?</li>
               <li>How can I view my invoices?</li>
             </ul>
-            <ul className="space-y-3 list-disc list-inside">
+            <ul className="space-y-3 list-disc list-inside" data-aos="fade-left">
               <li>What are credit pack subscriptions?</li>
               <li>What is the cost for cancellations?</li>
               <li>What does it mean for Tiptop Pro?</li>
@@ -87,14 +107,20 @@ export default function Home() {
         </section>
 
         {/* 📞 Contact Us */}
-        <section className="py-12 bg-gray-50 text-center">
+        <section className="py-12 bg-gray-50 text-center" data-aos="fade-up">
           <h2 className="text-2xl font-semibold mb-10">Connect with us</h2>
           <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 max-w-4xl mx-auto px-6">
-            <div className="bg-white p-6 border rounded-md flex-1">
+            <div
+              className="bg-white p-6 border rounded-md flex-1"
+              data-aos="fade-right"
+            >
               <p className="font-semibold mb-2">Contact us via support request</p>
               <button className="text-blue-600 underline">Submit a request</button>
             </div>
-            <div className="bg-white p-6 border rounded-md flex-1">
+            <div
+              className="bg-white p-6 border rounded-md flex-1"
+              data-aos="fade-left"
+            >
               <p className="font-semibold mb-2">Call us</p>
               <p>1-855-456-6789</p>
             </div>
@@ -102,8 +128,10 @@ export default function Home() {
         </section>
 
         {/* 📢 Footer CTA */}
-        <div className="bg-blue-100 text-center py-8 px-4">
-          <p className="text-gray-800 text-lg mb-3 font-medium">Need help finding what you need?</p>
+        <div className="bg-blue-100 text-center py-8 px-4" data-aos="zoom-in-up">
+          <p className="text-gray-800 text-lg mb-3 font-medium">
+            Need help finding what you need?
+          </p>
           <button className="bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700 transition">
             Submit a request
           </button>
