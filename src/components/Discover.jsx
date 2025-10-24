@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   FaHome,
   FaHeart,
@@ -8,6 +8,8 @@ import {
   FaChalkboardTeacher,
   FaBars,
 } from 'react-icons/fa';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const DiscoverSection = () => {
   const categories = [
@@ -19,10 +21,22 @@ const DiscoverSection = () => {
     { icon: <FaBars className="text-black text-lg sm:text-xl" />, label: 'Other Services' },
   ];
 
+  // 🔹 Initialize AOS once component mounts
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // animation speed
+      easing: 'ease-in-out',
+      once: false, // only animate once
+    });
+  }, []);
+
   return (
     <div className="bg-blue-50 py-8 px-4">
       {/* Title */}
-      <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-center mb-6 text-black">
+      <h2
+        className="text-lg sm:text-xl md:text-2xl font-semibold text-center mb-6 text-black"
+        data-aos="fade-down"
+      >
         Discover
       </h2>
 
@@ -32,11 +46,14 @@ const DiscoverSection = () => {
           <div
             key={index}
             className="flex flex-col items-center text-center text-xs sm:text-sm font-medium"
+            data-aos="zoom-in"
+            data-aos-delay={index * 100} // stagger animation for each icon
           >
             {/* Icon */}
             <div className="mb-2 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-md">
               {cat.icon}
             </div>
+
             {/* Label */}
             <span className="text-black">{cat.label}</span>
           </div>
