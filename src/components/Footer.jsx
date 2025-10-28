@@ -57,9 +57,8 @@ export default function TiptopFooter() {
             <Image src="/images/Vector(3).png" alt="LinkedIn" width={16} height={16} />
           </div>
           <select className="bg-gray-800 text-white border border-gray-700 px-2 py-1 rounded text-xs w-full sm:w-auto">
-            <option>🇬🇧 United Kingdom</option>
             <option>🇺🇸 United States</option>
-            <option>🇮🇳 India</option>
+        
           </select>
         </div>
       </div>

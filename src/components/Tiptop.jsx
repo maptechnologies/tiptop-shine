@@ -15,19 +15,20 @@ const WhyChooseSection = () => {
 
   return (
     <div
-      className="relative bg-blue-50 py-12 px-4 md:px-20 bg-no-repeat bg-cover bg-center"
+      className="relative py-12 px-4 md:px-20 bg-no-repeat bg-cover bg-center overflow-hidden"
       style={{
-        backgroundImage: "url('/images/cleaning-bg.png')",
+        backgroundImage: "url('/images/node.gif')",
+        backgroundAttachment: "fixed",
       }}
     >
-      {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-white/80 backdrop-blur-sm z-0" />
+      {/* ✅ Blur layer over the background image */}
+      <div className="absolute inset-0 backdrop-blur-[2px] bg-black/50 z-0" />
 
-      {/* Content Wrapper */}
-      <div className="relative z-10">
+      {/* ✅ Content Wrapper */}
+      <div className="relative z-10 text-white">
         {/* Heading */}
         <h2
-          className="text-2xl sm:text-2xl md:text-2xl font-semibold text-center text-black mb-3"
+          className="text-2xl sm:text-2xl md:text-2xl font-semibold text-center mb-3"
           data-aos="fade-down"
         >
           Why Choose Tip Top Shine?
@@ -35,7 +36,7 @@ const WhyChooseSection = () => {
 
         {/* Subtext */}
         <p
-          className="max-w-3xl mx-auto text-center text-gray-700 text-sm md:text-base mb-10 leading-relaxed px-2"
+          className="max-w-3xl mx-auto text-center text-sm md:text-base mb-10 leading-relaxed px-2 opacity-90"
           data-aos="fade-up"
           data-aos-delay="100"
         >
@@ -62,18 +63,16 @@ const WhyChooseSection = () => {
           </div>
 
           {/* Features */}
-          <div
-            className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-gray-800 text-sm max-w-3xl px-2"
-          >
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-sm max-w-3xl px-2">
             <div
               className="flex gap-3 items-start"
               data-aos="fade-right"
               data-aos-delay="250"
             >
-              <img src="/images/Group(1).png" alt="icon" className="w-5 h-5 mt-1" />
+              <img src="/images/Group(1).png" alt="icon" className="w-5 h-5 mt-1 invert" />
               <div>
-                <p className="font-semibold text-black mb-1">Verified & Trusted Professionals</p>
-                <p>Hand-selected experts you can rely on.</p>
+                <p className="font-semibold mb-1 text-white">Verified & Trusted Professionals</p>
+                <p className="opacity-80">Hand-selected experts you can rely on.</p>
               </div>
             </div>
 
@@ -82,10 +81,10 @@ const WhyChooseSection = () => {
               data-aos="fade-left"
               data-aos-delay="300"
             >
-              <img src="/images/Vector(4).png" alt="icon" className="w-5 h-5 mt-1" />
+              <img src="/images/Vector(4).png" alt="icon" className="w-5 h-5 mt-1 invert" />
               <div>
-                <p className="font-semibold text-black mb-1">Free Instant Quotes</p>
-                <p>Compare prices instantly from local pros.</p>
+                <p className="font-semibold mb-1 text-white">Free Instant Quotes</p>
+                <p className="opacity-80">Compare prices instantly from local pros.</p>
               </div>
             </div>
 
@@ -94,10 +93,10 @@ const WhyChooseSection = () => {
               data-aos="fade-right"
               data-aos-delay="350"
             >
-              <img src="/images/iconoir_clock.png" alt="icon" className="w-5 h-5 mt-1" />
+              <img src="/images/iconoir_clock.png" alt="icon" className="w-5 h-5 mt-1 invert" />
               <div>
-                <p className="font-semibold text-black mb-1">24/7 Customer Support</p>
-                <p>We're here to help — day or night.</p>
+                <p className="font-semibold mb-1 text-white">24/7 Customer Support</p>
+                <p className="opacity-80">We're here to help — day or night.</p>
               </div>
             </div>
 
@@ -106,10 +105,10 @@ const WhyChooseSection = () => {
               data-aos="fade-left"
               data-aos-delay="400"
             >
-              <img src="/images/Group2190.png" alt="icon" className="w-5 h-5 mt-1" />
+              <img src="/images/Group2190.png" alt="icon" className="w-5 h-5 mt-1 invert" />
               <div>
-                <p className="font-semibold text-black mb-1">100% Satisfaction Guarantee</p>
-                <p>Your happiness is our priority.</p>
+                <p className="font-semibold mb-1 text-white">100% Satisfaction Guarantee</p>
+                <p className="opacity-80">Your happiness is our priority.</p>
               </div>
             </div>
           </div>

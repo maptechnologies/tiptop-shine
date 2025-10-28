@@ -44,7 +44,7 @@ export default function LeadsPopup({ onClose }) {
     };
 
     return (
-        <div className="fixed inset-0  bg-opacity-30 backdrop-blur-sm flex justify-center items-center p-4 z-50">
+        <div className="fixed inset-0  my-20 bg-opacity-30 backdrop-blur-sm flex justify-center items-center p-4 z-50">
             <div className="bg-white max-w-lg w-full rounded-lg shadow-lg p-8 relative">
                 {/* Close button */}
                 <button

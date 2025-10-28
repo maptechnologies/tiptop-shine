@@ -311,7 +311,7 @@ export default function HomePage() {
               alt="Highly Rated"
               width={288}
               height={180}
-              className="object-cover w-full h-auto"
+              className="object-cover w-[800px] h-105"
             />
             <div className="bg-white p-4 text-center">
               <h4 className="text-gray-900 text-sm font-medium mb-1">
