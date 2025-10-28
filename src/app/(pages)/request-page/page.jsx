@@ -7,6 +7,7 @@ import 'aos/dist/aos.css';
 
 export default function RequestSection() {
   const [showModal, setShowModal] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState(null); // hover index track karne ke liye
 
   // Initialize AOS
   useEffect(() => {
@@ -16,6 +17,13 @@ export default function RequestSection() {
       easing: 'ease-in-out',
     });
   }, []);
+
+  const suggestions = [
+    { title: 'Gardening', image: '/images/istockphoto-2207150736-612x612.webp' },
+    { title: 'Personal Trainer', image: '/images/istockphoto-2166986800-612x612.webp' },
+    { title: 'Web Design', image: '/images/istockphoto-2212360504-612x612.webp' },
+    { title: 'Cleaner', image: '/images/istockphoto-2172691408-612x612.webp' },
+  ];
 
   return (
     <section className="py-12 px-4 md:px-16 bg-gray-50 text-gray-800 relative">
@@ -51,23 +59,28 @@ export default function RequestSection() {
           You May Also Need
         </h4>
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
-          {[
-            { title: 'Gardening', image: '/images/img1.jpg' },
-            { title: 'Personal Trainer', image: '/images/img2.jpg' },
-            { title: 'Web Design', image: '/images/img3.jpg' },
-            { title: 'Cleaner', image: '/images/img4.jpg' },
-          ].map((item, index) => (
+          {suggestions.map((item, index) => (
             <div
               key={item.title}
-              className="rounded-md overflow-hidden bg-white shadow hover:shadow-lg transition cursor-pointer"
+              className="relative rounded-md overflow-hidden bg-white shadow hover:shadow-lg transition cursor-pointer"
               data-aos="fade-up"
               data-aos-delay={index * 150} // stagger effect
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
             >
               <img
                 src={item.image}
                 alt={item.title}
                 className="w-full h-40 object-cover"
               />
+
+              {/* Popup on hover */}
+              {hoveredIndex === index && (
+                <div className="absolute top-2 left-2 bg-white bg-opacity-90 p-2 rounded shadow-md text-sm font-semibold text-gray-800 z-10">
+                  {item.title} Service Available!
+                </div>
+              )}
+
               <div className="p-4 text-center font-medium text-gray-700">
                 {item.title}
               </div>

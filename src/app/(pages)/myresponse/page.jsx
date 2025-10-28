@@ -70,9 +70,12 @@ export default function Home() {
   return (
    <div> 
     <UserHeader/>
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-screen bg-gray-100 ">
       <Sidebar selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
       <DashboardContent selectedTab={selectedTab} />
-    </div></div>
+    </div>
+    <img src="/images/women in power banner 1.png"  />
+    </div>
+  
   );
 }

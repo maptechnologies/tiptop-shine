@@ -4,8 +4,8 @@ export default function DashboardContent({ selectedTab }) {
   if (selectedTab === "pending") {
     return (
       <div className="flex-1 p-10 flex flex-col items-center justify-center text-center">
-        <img src="/icons/pending.svg" className="w-20 h-20 mb-6 opacity-50" alt="pending" />
-        <h2 className="text-xl font-semibold mb-2">No Replies Yet</h2>
+        <img src="/images/Vector (5).png" className="w-60 h-50 mb-6 opacity-50" alt="pending" />
+        <h2 className="text-xl font-semibold text-black mb-2">No Replies Yet</h2>
         <p className="text-gray-500">
           You haven’t reached out to any customers so far.
           <br /> Once you respond, their details will appear here.
