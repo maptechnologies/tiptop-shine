@@ -58,7 +58,7 @@ export default function LeadsPopup({ onClose }) {
                 {/* Stepper content */}
                 {step === 1 && (
                     <>
-                        <h2 className="text-2xl font-semibold mb-2 text-center">
+                        <h2 className="text-2xl font-semibold mb-2 text-black text-center">
                             Where Would You Like To See Leads From?
                         </h2>
                         <p className="text-center text-gray-500 mb-6 text-sm">
