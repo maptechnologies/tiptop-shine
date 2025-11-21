@@ -14,9 +14,9 @@ const Header = () => {
           <Image
             src="/images/animated logo.gif"
             alt="Logo"
-            height={200}
-            width={200}
-            className="w-50 h-18 ml-[-25px] "
+            height={300}
+            width={300}
+            className="w-80 h-25 ml-[-25px] "
           />
         </Link>
         {/* <span className="text-sm sm:text-base cursor-pointer hover:text-blue-300 transition">
@@ -25,13 +25,13 @@ const Header = () => {
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex items-center gap-4">
-        <Link href="/login" className="text-sm hover:underline">
+      <div className="hidden lg:flex items-center gap-4">
+        <Link href="/login" className="text-lg hover:underline  ">
           Login
         </Link>
         <Link
           href="/join-professional"
-          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm transition"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded text-lg transition"
         >
           Login as a Professional
         </Link>

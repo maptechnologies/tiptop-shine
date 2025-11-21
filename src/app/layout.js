@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
   }, []);
 
   // Pages jahan upar wala header nahi dikhana (black login wala)
-  const hideHeaderOn = ["/myresponse", "/profile"]; // example
+  const hideHeaderOn = ["/general-dashboard","/myresponse", "/leads","/setting","/profile","/helpdashboard"]; // example
 
   return (
     <html lang="en">
@@ -48,8 +48,9 @@ export default function RootLayout({ children }) {
         )}
 
         {/* UserHeader sirf dashboard par */}
-        {pathname === "" && (
+        {pathname === "general-dashboard" && (
           <header data-aos="fade-down">
+            
             <UserHeader />
           </header>
         )}
