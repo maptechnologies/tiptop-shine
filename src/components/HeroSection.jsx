@@ -10,7 +10,7 @@ const HeroSection = () => {
     AOS.init({
       duration: 1000,
       easing: 'ease-in-out',
-      once: true,
+      once: false,
     });
   }, []);
 
@@ -64,7 +64,7 @@ const HeroSection = () => {
 
             {/* Service Input */}
             <div className="relative" data-aos="fade-up" data-aos-delay="700">
-              <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 pointer-events-none text-lg" />
+              <FaSearch className="absolute left-4 top-1/2 -translate-y-4 text-white/70 pointer-events-none text-lg" />
               <input
                 type="text"
                 placeholder="What service?"
